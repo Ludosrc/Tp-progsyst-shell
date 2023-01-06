@@ -13,14 +13,14 @@
 
 //Macro section
 #define Message_Bienvenue "Bienvenue dans le Shell ENSEA.\nPour quitter, tapez 'exit'.\n"
-#define PROMPT "enseash %"
+#define PROMPT "enseash % "
+#define  MAX_BUFFER_SIZE 512
 
 //Prototype section
 
 void displayBienvenue();
 void displayPrompt();
-
-
+void executeCommande();
 
 
 #define UNTITLED_HEADER_H

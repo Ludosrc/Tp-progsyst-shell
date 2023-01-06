@@ -1,3 +1,7 @@
+//
+// Created by ludovic on 06/01/23.
+//
+
 #include "header.h"
 
 void displayBienvenue(){
@@ -7,6 +11,6 @@ void displayBienvenue(){
 void displayPrompt(){
     write(STDOUT_FILENO,PROMPT,sizeof(PROMPT)-1);
 }
-//
-// Created by ludovic on 06/01/23.
-//
+
+
+
