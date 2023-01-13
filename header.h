@@ -22,6 +22,7 @@
 void displayBienvenue();
 void displayPrompt();
 void executeCommande();
+void displayNextPrompt(int status,int temps);
 void exitCommande();
 
 

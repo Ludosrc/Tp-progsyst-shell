@@ -3,11 +3,16 @@
 //
 #include <wait.h>
 #include <string.h>
+#include <time.h>
 #include "header.h"
 
 
 void executeCommande(){
     int nbCharRead;
+    int temps;
+    struct timespec clk_debut, clk_fin;
+    clock_gettime(CLOCK_REALTIME,&clk_debut);
+
     // permet de récupérer plus tard pour suprimmer
     // le dernier caractère de la chaine
 
@@ -28,15 +33,17 @@ void executeCommande(){
 
     pid_t ret = fork();
     if(ret == 0){
-
         execlp(buffer,buffer,NULL);
         exit(EXIT_FAILURE);
     }
 
     else{
         wait(&status);
+        clock_gettime(CLOCK_REALTIME,&clk_fin);
+        temps = (clk_fin.tv_sec-clk_debut.tv_sec)*1000 + (clk_fin.tv_nsec-clk_debut.tv_nsec)/1000000;
+        displayNextPrompt(status,temps);
         // On attend que le fils est fini pour afficher prompt
-        displayPrompt();
+
     }
 }
 
