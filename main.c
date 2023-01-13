@@ -6,8 +6,8 @@ int main(int argc, char *argv[]) {
     displayPrompt();
 
     while(1){
-        executeCommande();
-
+        //executeCommande();
+        executeComplex();
     }
 
     return EXIT_SUCCESS;

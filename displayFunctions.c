@@ -2,7 +2,6 @@
 // Created by ludovic on 06/01/23.
 //
 
-#include <string.h>
 #include "header.h"
 
 void displayBienvenue(){
